@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const searchSlice = createSlice({
     name : "search",
     initialState : {
-        query : "",
+        query : "cat",
         activeTab : "photos",
         results : [],
         loading : false,

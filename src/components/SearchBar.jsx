@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import {useDispatch} from 'react-redux'
-import setQuery from '../redux/features/searchSlice.js'
+import {setQuery} from '../redux/features/searchSlice.js'
 
 const SearchBar = () => {
     const [search, setsearch] = useState('')
@@ -9,8 +9,11 @@ const SearchBar = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        dispatch(setQuery(search))
+
+       if(search.trim()){
+         dispatch(setQuery(search))
         setsearch('')
+       }
     }
   return (
     <div className='bg-gray-800 w-full py-6 px-4 '>

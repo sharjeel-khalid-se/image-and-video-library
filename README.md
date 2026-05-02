@@ -14,3 +14,52 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Wallpapers Library
+
+A simple React + Vite application to search, view, and save wallpapers. Uses Redux Toolkit to manage a local collection persisted in `localStorage`.
+
+## Short description
+
+Wallpapers Library lets users browse photos and videos, save favorites to a local collection, and view saved items later. The app is built with Vite, React, and Redux Toolkit.
+
+## Quick Start
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Run development server
+
+```bash
+npm run dev
+```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Preview production build
+
+```bash
+npm run preview
+```
+
+## Project structure (key files)
+
+- `src/main.jsx` — app entry
+- `src/App.jsx` — top-level component
+- `src/components/ResultCard.jsx` — item display and save action
+- `src/redux/features/collectionSlice.js` — collection state and actions
+
+## Notes
+
+- Collection items are persisted to `localStorage` under the key `collection`.
+- To change API-related behavior, check `src/api/mediaApi.js`.
+
+## License
+
+MIT

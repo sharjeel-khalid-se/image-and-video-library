@@ -11,7 +11,7 @@ const Tab = () => {
     <div className='flex gap-5 justify-center items-center mt-4'>
         {tabs.map((elem, idx)=>(
             <button key={idx} 
-             className={`${elem==activeTab?"bg-blue-900":"bg-gray-800"} px-6 py-4 rounded active:scale-105 transition`}
+             className={`${elem==activeTab?"bg-blue-900":"bg-gray-800"} px-6 py-4 rounded active:scale-105 transition cursor-pointer`}
               onClick={()=>dispatch(setActiveTab(elem))}>
                 {elem}
             </button>

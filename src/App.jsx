@@ -1,14 +1,19 @@
 import React from 'react'
-import SearchBar from './components/SearchBar'
-import Tab from './components/Tab'
-import ResultGrid from './components/ResultGrid'
+import { Router, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Collection from './pages/Collection'
+import Navbar from './components/Navbar'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
-    <div className='bg-gray-900 text-white h-screen w-full'>
-      <SearchBar/>
-      <Tab/>
-      <ResultGrid/>
+    <div>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/collection' element={<Collection/>}/>
+      </Routes>
+      <ToastContainer/>
     </div>
   )
 }
